@@ -1,0 +1,315 @@
+/* General Layout for List */
+.list-container {
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* Notes container */
+.Notes {
+  padding: 20px;
+  background-color: rgba(20, 20, 40, 0.8); /* Deep space-like background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  color: #000000;
+}
+
+/* Grid for notes */
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  color: #000000;
+}
+
+/* Individual note card */
+.note-card {
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: rgba(100, 100, 180, 0.7); /* Nebula-like background */
+}
+
+/* Make text inside notes black */
+.note-card .note-content {
+  color: #000000; /* Black text for readability inside notes */
+}
+
+/* Hover effect for note card */
+.note-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Note content styling */
+.note-content {
+  color: #000000; /* Black text inside notes */
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Edit and delete icons */
+#edit,
+#x {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#edit:hover,
+#x:hover {
+  transform: scale(1.2);
+}
+
+/* Add Image icon */
+.add-image {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-image:hover {
+  transform: scale(1.1);
+}
+
+/* Add Note Button centered */
+.add-note-btn {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #4e8ee1, #2e6bb8); /* Blue gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-note-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(47, 97, 179, 0.7);
+}
+
+/* Offcanvas (Space-themed) */
+.offcanvas {
+  background: rgba(255, 255, 255, 0.6); /* 60% transparent black */
+  color: #040404; /* Bright white text */
+  box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.2), 0px 0px 25px rgba(100, 149, 237, 0.6);
+  backdrop-filter: blur(20px); /* Frosted glass effect */
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+.offcanvas-header {
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(0, 0, 50, 0.5), rgba(0, 0, 80, 0.2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.offcanvas-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  
+
+}
+
+.offcanvas-body {
+  padding: 20px;
+  background: radial-gradient(circle, rgba(0, 0, 50, 0.5), transparent);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offcanvas-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input and textarea fields */
+.offcanvas input,
+.offcanvas textarea {
+  background-color: #ffffff; /* White background for input fields */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: #333333; /* Dark text for contrast */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offcanvas input:focus,
+.offcanvas textarea:focus {
+  border-color: #2e6bb8; /* Soft blue focus color */
+  box-shadow: 0px 0px 12px #2e6bb8;
+  outline: none;
+}
+
+.offcanvas .form-label {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Save Button */
+.save-btn {
+  background: linear-gradient(90deg, #4e8ee1, #2e6bb8); /* Subtle blue gradient */
+  border: none;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.save-btn:hover {
+  background: linear-gradient(90deg, #2e6bb8, #4e8ee1);
+  box-shadow: 0px 0px 15px #2e6bb8;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #2e6bb8;
+}
+
+/* Circular color picker */
+#note-color {
+  appearance: none;
+  width: 36px; /* 60px - 40% */
+  height: 36px; /* 60px - 40% */
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3), 0px 0px 20px rgba(30, 241, 227, 0.5);
+  margin: 0 auto; /* Center the color picker */
+  position: relative;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#note-color::-webkit-color-swatch {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;  /* Use the selected color */
+  border: none;
+}
+
+#note-color:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6), 0px 0px 25px rgba(30, 241, 227, 0.8);
+}
+
+/* Optional: Highlight when focus is on the color picker */
+#note-color:focus {
+  outline: none;
+  box-shadow: 0 0 8px 4px rgba(30, 241, 227, 0.8);
+}
+
+
+/* Optional: Highlight when focus is on the color picker */
+#note-color:focus {
+  outline: none;
+  box-shadow: 0 0 8px 4px rgba(30, 241, 227, 0.8);
+}
+
+
+/* Glow Animation for Cosmic Theme */
+.offcanvas::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent);
+  transform: rotate(45deg);
+  opacity: 0.4;
+  z-index: -1;
+  animation: cosmicGlow 20s linear infinite;
+}
+
+@keyframes cosmicGlow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Styling for the form control elements */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #979895;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ebebeb;
+}
+
+/* Styling for form buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Note date styling */
+.note-date {
+  font-size: 10px;
+  display: table;
+  padding: 0px;
+  margin: 0px;
+  background-color: hsla(203, 85%, 18%, 0.874); /* Keep the background color */
+  color: rgb(255, 255, 255); /* Set the text color to black */
+}
+

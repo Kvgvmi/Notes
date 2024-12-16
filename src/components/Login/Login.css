@@ -1,0 +1,182 @@
+body {
+  background: rgba(255, 255, 255, 0.5) url('/public/images/ultra.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire page */
+  height: 100vh;
+  margin: 0; /* Remove default margin */
+}
+
+
+
+/* Animation du gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Formulaire avec animation de fade-in */
+.login-form {
+  background: rgba(255, 255, 255, 0.02); /* Even more transparent background */
+  backdrop-filter: blur(10px); /* Blur effect to create the frosted glass look */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 1.5s ease-in-out; /* Animation d'apparition */
+  position: relative;
+  z-index: 1; /* Ensures the form appears above the background */
+}
+
+
+
+
+
+/* Animation fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre principal */
+.login-form h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #93c5fd; /* Bleu clair */
+}
+
+/* Emoji avec animation "wave" */
+.login-form h1 span {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+}
+
+/* Animation pour l'emoji */
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Sous-titre */
+.login-form p {
+  font-size: 14px;
+  color: #94a3b8; /* Gris clair */
+  margin-bottom: 20px;
+}
+
+/* Champs de saisie */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #334155; /* Bleu-gris */
+  color: #ffffff;
+  font-size: 14px;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition pour l'effet au survol */
+}
+
+.login-input::placeholder {
+  color: #64748b; /* Gris clair */
+}
+
+/* Effet au survol des champs */
+.login-input:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Bouton avec animation au survol */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb); /* Dégradé bleu */
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.7);
+  background: linear-gradient(90deg, #2563eb, #1e40af); /* Bleu foncé */
+}
+
+/* Never-ending floating animation */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Styling for the login form */
+/* Ensure the form is transparent */
+.login-container {
+  border-radius: 10px;
+  width: 350px;
+  margin: 50px auto;
+  text-align: center;
+  animation: floating 3s ease-in-out infinite;
+  
+  /* Remove background completely for transparency */
+  background: none; 
+  /* No background color or image */
+}
+
+.login-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}

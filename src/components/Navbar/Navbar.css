@@ -1,0 +1,171 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1); /* Transparence */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px; /* Forme arrondie */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.Navbar input {
+  padding: 12px 20px;
+  width: 270px;
+  height: 50px;
+  border-radius: 5px; /* Arrondi plus prononcé */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  font-size: 16px;
+  color: #000; 
+  background-color: rgba(173, 216, 230, 0.8);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.Navbar input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0px 0px 12px #00d4ff;
+}
+
+.Navbar button {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #00d4ff, #007aff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px; /* Forme plus douce */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.Navbar button:hover {
+  background: linear-gradient(90deg, #007aff, #00d4ff);
+  box-shadow: 0px 0px 15px #00d4ff;
+}
+
+.salutation {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #00d4ff;
+  text-shadow: 0px 0px 8px #00d4ff, 0px 0px 12px rgba(0, 212, 255, 0.5);
+}
+
+.salutation::after {
+  content: "✨";
+  margin-left: 10px;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+/* Button container */
+.Navbar .button-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Logout & Change Password buttons */
+.Navbar .change-password-button,
+.Navbar .logout-button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #007aff, #00d4ff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.Navbar .change-password-button:hover,
+.Navbar .logout-button:hover {
+  background: linear-gradient(90deg, #00d4ff, #007aff);
+  box-shadow: 0px 0px 15px #007aff;
+}
+
+.change-password-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: hsl(0, 0%, 70%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content input {
+  display: block; /* Pour s'assurer qu'ils occupent une nouvelle ligne */
+  width: 100%; /* Ils prendront toute la largeur du conteneur parent */
+  margin: 10px 0; /* Espace entre les inputs */
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #fffcfc30;
+  font-size: 14px;
+  box-sizing: border-box; /* Empêche les débordements dus au padding */
+}
+
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-button {
+  background: #4caf50;
+  color: white;
+}
+
+.cancel-button {
+  background: #f44336;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
